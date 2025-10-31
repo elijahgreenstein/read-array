@@ -12,17 +12,13 @@ Use index `i * p + j`, where `p` is the number of columns, to access zero-indexe
 
 Both functions take the following parameters:
 
-+----------+-----------------------------------------------------------------+
-| `file`   | File stream (the data).                                         |
-+----------+-----------------------------------------------------------------+
-| `delim`  | Field delimiter, separating values on each line.                |
-+----------+-----------------------------------------------------------------+
-| `array`  | Address of array of `double`/`int` values (modified in place).  |
-+----------+-----------------------------------------------------------------+
-| `n`      | Number of rows (modified in place).                             |
-+----------+-----------------------------------------------------------------+
-| `p`      | Number of columns (modified in place).                          |
-+----------+-----------------------------------------------------------------+
+| Parameter  | Description                                                     |
+| ---------- | ----------------------------------------------------------------|
+| `file`     | File stream (the data).                                         |
+| `delim`    | Field delimiter, separating values on each line.                |
+| `array`    | Address of array of `double`/`int` values (modified in place).  |
+| `n`        | Number of rows (modified in place).                             |
+| `p`        | Number of columns (modified in place).                          |
 
 Note that `array`, `n`, and `p` are modified in place;
 hence, pass the addresses of the variables to the relevant function.
@@ -34,17 +30,13 @@ If the load fails, then the function returns an error code (an `int` less than `
 
 ### Error codes
 
-+----------+------------------------------------------------------------+
+| Error    | Description                                                |
+| -------- | -----------------------------------------------------------|
 | `0`      | The file stream points to `NULL`.                          |
-+----------+------------------------------------------------------------+
 | `-1`     | Found inconsistent number of fields after the first line.  |
-+----------+------------------------------------------------------------+
 | `-2`     | Last line does not end with a newline character (`\n`).    |
-+----------+------------------------------------------------------------+
 | `-3`     | Failed to allocate memory for the array with `malloc`.     |
-+----------+------------------------------------------------------------+
 | `-4`     | Failed to load a value or encountered invalid character.   |
-+----------+------------------------------------------------------------+
 
 ## Example usage
 
