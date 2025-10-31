@@ -44,7 +44,7 @@ If the load fails, then the function returns an error code (an `int` less than `
 - Access value in second row, third column (i.e. `a[1][2]` of zero-indexed array)
 - Free memory
 
-```
+```c
 FILE *file = fopen("data.csv", "r");
 char delim = ',';
 double *array = NULL;
