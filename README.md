@@ -38,6 +38,8 @@ If the load fails, then the function returns an error code (an `int` less than `
 | `-3`     | Failed to allocate memory for the array with `malloc`.     |
 | `-4`     | Failed to load a value or encountered invalid character.   |
 
+Note that if the function returns error code `-4`, then the values of `n` and `p` are set to the line and field where the problem was encountered.
+
 ## Example usage
 
 - Load array
